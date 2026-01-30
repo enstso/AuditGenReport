@@ -161,3 +161,5 @@ def generate_pdf_json(req: PdfRequest, x_api_key: Optional[str] = Header(default
     b64 = base64.b64encode(pdf_bytes).decode("ascii")
     filename = f"{req.title.strip().replace(' ', '_')}.pdf"
     return JSONResponse({"filename": filename, "pdf_base64": b64})
+
+
