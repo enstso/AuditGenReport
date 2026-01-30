@@ -1,0 +1,34 @@
+
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <title>{{ title }}</title>
+</head>
+<body>
+
+  <!-- Page de garde -->
+  <section class="cover page-break">
+    <div class="cover-inner">
+      <div class="kicker">AUDIT ÉNERGÉTIQUE</div>
+      <h1 class="cover-title">{{ title }}</h1>
+      {% if subtitle %}<div class="cover-subtitle">{{ subtitle }}</div>{% endif %}
+
+      <div class="cover-meta">
+        {% if client %}<div><strong>Client :</strong> {{ client }}</div>{% endif %}
+        {% if date %}<div><strong>Date :</strong> {{ date }}</div>{% endif %}
+      </div>
+
+      <div class="cover-footer">
+        <div class="muted">Document généré automatiquement</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Corps -->
+  <main class="content">
+    {{ body_html | safe }}
+  </main>
+
+</body>
+</html>
